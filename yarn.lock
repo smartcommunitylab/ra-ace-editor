@@ -4834,6 +4834,14 @@
     "babel-plugin-macros" "^3.1.0"
     "babel-plugin-transform-react-remove-prop-types" "^0.4.24"
 
+"babel-runtime@^6.26.0":
+  "integrity" "sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g=="
+  "resolved" "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz"
+  "version" "6.26.0"
+  dependencies:
+    "core-js" "^2.4.0"
+    "regenerator-runtime" "^0.11.0"
+
 "bail@^1.0.0":
   "integrity" "sha512-xFbRxM1tahm08yHBP16MMjVUAvDaBMD38zsM9EMAUN61omwLmKlOpB/Zku5QkjZ8TZ4vn53pj+t518cH0S03RQ=="
   "resolved" "https://registry.npmjs.org/bail/-/bail-1.0.5.tgz"
@@ -5800,6 +5808,11 @@
   "integrity" "sha512-BS2NHgwwUppfeoqOXqi08mUqS5FiZpuRuJJpKsaME7kJz0xxuk0xkhDdfMIlP/zLa80krBqss1LtD7f889heAw=="
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.27.1.tgz"
   "version" "3.27.1"
+
+"core-js@^2.4.0":
+  "integrity" "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
+  "version" "2.6.12"
 
 "core-js@^3.0.4", "core-js@^3.19.2", "core-js@^3.6.5", "core-js@^3.8.2":
   "integrity" "sha512-GutwJLBChfGCpwwhbYoqfv03LAfmiz7e7D/BNxzeMxwQf10GRSzqiOjx7AmtEk+heiD/JWmBuyBPgFtx0Sg1ww=="
@@ -7324,6 +7337,14 @@
     "regex-not" "^1.0.0"
     "snapdragon" "^0.8.1"
     "to-regex" "^3.0.1"
+
+"fakerest@^3.0.0":
+  "integrity" "sha512-D1y6a13dh34n738YMztecCX36JRKI5kxPaNVQukXUXvUyK7eANWyB5zczy0SMoMUDXC/ceKfjkgwbc1AYqYYOQ=="
+  "resolved" "https://registry.npmjs.org/fakerest/-/fakerest-3.3.0.tgz"
+  "version" "3.3.0"
+  dependencies:
+    "babel-runtime" "^6.26.0"
+    "lodash" "^4.17.21"
 
 "fast-deep-equal@^3.1.1", "fast-deep-equal@^3.1.3":
   "integrity" "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="
@@ -12277,6 +12298,13 @@
     "react-is" "^17.0.2"
     "react-query" "^3.32.1"
 
+"ra-data-fakerest@^4.6.2":
+  "integrity" "sha512-Z0I5nOBYnE+kZStQ0Slt/YDGEs1XWlgQYCoKiQfvOhmvXxCaLREskTYUMMUmKYrD+f+Ep7pWgImtLcBnbLeOEw=="
+  "resolved" "https://registry.npmjs.org/ra-data-fakerest/-/ra-data-fakerest-4.6.2.tgz"
+  "version" "4.6.2"
+  dependencies:
+    "fakerest" "^3.0.0"
+
 "ra-data-json-server@^4.6.2":
   "integrity" "sha512-ySKi7KLrn5bLyc6cdEgnxNHHeRtTqccmJ+r4dTZinTYlZ+S61UipEbcMwpN+h6qBT6579U9RRnz2O/QwFClYLQ=="
   "resolved" "https://registry.npmjs.org/ra-data-json-server/-/ra-data-json-server-4.6.2.tgz"
@@ -12874,6 +12902,11 @@
   "integrity" "sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A=="
   "resolved" "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz"
   "version" "1.4.2"
+
+"regenerator-runtime@^0.11.0":
+  "integrity" "sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg=="
+  "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz"
+  "version" "0.11.1"
 
 "regenerator-runtime@^0.13.11", "regenerator-runtime@^0.13.2", "regenerator-runtime@^0.13.7", "regenerator-runtime@^0.13.9":
   "integrity" "sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg=="

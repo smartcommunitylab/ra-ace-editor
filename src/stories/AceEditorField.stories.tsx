@@ -1,38 +1,41 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { EditorField } from './AceEditorField';
+import { AceEditorField } from './AceEditorField';
 
 export default {
   title: 'Ra-Ace-Editor/AceEditorField',
-  component: EditorField,
+  component: AceEditorField,
   argTypes: {
   },
   args: {
     fullWidth: false,
-    theme: 'monokai'
+    theme: 'github',
+    record: { id: 0, body: '' },
+    source: 'body'
   }
-} as ComponentMeta<typeof EditorField>;
+} as ComponentMeta<typeof AceEditorField>;
 
-const Template: ComponentStory<typeof EditorField> = (args) => <EditorField {...args} />;
+const Template: ComponentStory<typeof AceEditorField> = (args) => <AceEditorField {...args} />;
 
 export const HtmlField = Template.bind({});
 HtmlField.args = {
-  value: "Some <strong>html</strong> text",
+  record: { body: "Some <strong>html</strong> text" },
   mode: 'html',
 };
 
 export const JavascriptField = Template.bind({});
 JavascriptField.args = {
-  value: `function say(value) {
+  record: {
+    body: `function say(value) {
     return value;
-};`,
+};`},
   mode: 'javascript',
 };
 
 export const JsonField = Template.bind({});
 JsonField.args = {
-  value: '{"id":0, "body":"text value"}',
+  record: { body: '{"id":0, "body":"text value"}' },
   mode: 'json',
 };
 

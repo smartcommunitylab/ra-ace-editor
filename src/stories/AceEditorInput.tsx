@@ -2,13 +2,15 @@ import React from 'react';
 import { AdminContext, SimpleForm } from 'react-admin';
 import { Card, CardContent } from '@mui/material';
 
-import { AceEditorInput } from '../AceEditorInput';
+import { AceEditorInput as EditorInput } from '../AceEditorInput';
 
 const Wrapper = ({ children, ...props }: any) => (
     <AdminContext {...props}>{children}</AdminContext>
 );
 
-interface EditorProps {
+interface AceEditorProps {
+    record: any,
+    source: string,
     value?: string,
     mode?: 'java' | 'javascript' | 'markdown' | 'drools' | 'html' | 'python' | 'json' | 'sql' | 'typescript' | 'css' | 'yaml' | 'text';
     fullWidth?: boolean,
@@ -16,19 +18,18 @@ interface EditorProps {
     theme?: 'github' | 'monokai' | 'solarized_dark' | 'solarized_light';
 };
 
-export const EditorInput = ({
-    value,
+export const AceEditorInput = ({
+    record, source,
     mode, fullWidth, theme, helperText,
     ...props
-}: EditorProps) => {
+}: AceEditorProps) => {
     const aceProps = { mode, theme, fullWidth, helperText };
-    const record = { id: 0, body: value };
     return (
         <Wrapper>
             <Card>
                 <CardContent>
                     <SimpleForm resource="posts" record={record}>
-                        <AceEditorInput label={mode} source="body" {...aceProps} />
+                        <EditorInput label={mode} source={source} {...aceProps} />
                     </SimpleForm>
                 </CardContent>
             </Card>

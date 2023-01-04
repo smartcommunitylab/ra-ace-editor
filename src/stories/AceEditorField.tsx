@@ -1,8 +1,8 @@
 import React from 'react';
-import { AdminContext, ResourceContextProvider, SimpleForm, SimpleShowLayout } from 'react-admin';
+import { AdminContext, ResourceContextProvider, SimpleShowLayout } from 'react-admin';
 import { Card, CardContent } from '@mui/material';
 
-import { AceEditorField } from '../AceEditorField';
+import { AceEditorField as AceField } from '../AceEditorField';
 
 const Wrapper = ({ record, children, ...props }: any) => (
     <AdminContext {...props}>
@@ -18,35 +18,25 @@ const Wrapper = ({ record, children, ...props }: any) => (
     </AdminContext>
 );
 
-interface EditorProps {
-    value?: string,
+interface AceEditorProps {
+    record: any,
+    source: string,
     mode?: 'java' | 'javascript' | 'markdown' | 'drools' | 'html' | 'python' | 'json' | 'sql' | 'typescript' | 'css' | 'yaml' | 'text';
     fullWidth?: boolean,
     helperText?: string
     theme?: 'github' | 'monokai' | 'solarized_dark' | 'solarized_light';
 };
 
-export const EditorField = ({
-    value,
+export const AceEditorField = ({
+    record, source,
     mode, fullWidth, theme, helperText,
     ...props
-}: EditorProps) => {
+}: AceEditorProps) => {
     const aceProps = { mode, theme, fullWidth, helperText };
-    const record = { id: 0, body: value };
     return (
         <Wrapper record={record}>
-            <AceEditorField label={mode} source="body" {...aceProps} />
+            <AceField label={mode} source={source} {...aceProps} />
         </Wrapper>
     );
-    // return (
-    //     <Wrapper>
-    //         <Card>
-    //             <CardContent>
-    //                 <SimpleForm resource="posts" record={record}>
-    //                     <AceEditorField label={mode} source="body" {...aceProps} />
-    //                 </SimpleForm>
-    //             </CardContent>
-    //         </Card>
-    //     </Wrapper>
-    // );
+
 };

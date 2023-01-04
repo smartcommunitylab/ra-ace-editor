@@ -1,38 +1,41 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { EditorInput } from './AceEditorInput';
+import { AceEditorInput } from './AceEditorInput';
 
 export default {
   title: 'Ra-Ace-Editor/AceEditorInput',
-  component: EditorInput,
+  component: AceEditorInput,
   argTypes: {
   },
   args: {
     fullWidth: false,
-    theme: 'monokai'
+    theme: 'monokai',
+    record: { id: 0, body: '' },
+    source: 'body'
   }
-} as ComponentMeta<typeof EditorInput>;
+} as ComponentMeta<typeof AceEditorInput>;
 
-const Template: ComponentStory<typeof EditorInput> = (args) => <EditorInput {...args} />;
+const Template: ComponentStory<typeof AceEditorInput> = (args) => <AceEditorInput {...args} />;
 
 export const HtmlEditor = Template.bind({});
 HtmlEditor.args = {
-  value: "Some <strong>html</strong> text",
+  record: { body: "Some <strong>html</strong> text" },
   mode: 'html',
 };
 
 export const JavascriptEditor = Template.bind({});
 JavascriptEditor.args = {
-  value: `function say(value) {
+  record: {
+    body: `function say(value) {
     return value;
-};`,
+};`},
   mode: 'javascript',
 };
 
 export const JsonEditor = Template.bind({});
 JsonEditor.args = {
-  value: '{"id":0, "body":"text value"}',
+  record: { body: '{"id":0, "body":"text value"}' },
   mode: 'json',
 };
 

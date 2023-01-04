@@ -25,7 +25,7 @@ import { get } from 'lodash';
 export const AceEditorField = (props: AceFieldProps) => {
     const {
         mode = "html",
-        theme = "monokai",
+        theme = "github",
         label,
         fullWidth = false,
         resource,
